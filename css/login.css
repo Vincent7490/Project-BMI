@@ -1,0 +1,105 @@
+input{
+    height:1.6em;
+    font-size:0.7em;
+}
+
+
+.alreadyLogged{
+    text-align: center;
+    color: black;
+    margin-top: 3em;
+}
+
+.alreadyLogged a{
+    text-align: center;
+    color: rgb(153, 8, 39);
+}
+
+.adminLogged{
+    text-align: center;
+    background-color: rgb(160, 160, 160);
+    margin:auto;
+    max-width: 10%;
+}
+
+.adminLogged a{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.formContainer{
+    margin: auto;
+    text-align: left;
+    background-color: #191b20;
+    color: #f84242;
+    width:30%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2em;
+    padding-bottom: 6em;
+    border: 1em;
+}
+
+input {
+    border: solid 2px #ffffff;
+}
+
+input:hover {
+    border: solid 2px #0b3fc4;
+}
+
+input:focus {
+    border: solid 2px #f84242;
+}
+
+.formContainer button{
+    grid-column: 8/9;
+}
+
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+/* Grid columns here */
+
+form{
+    display: grid;
+	grid-template-columns: repeat(4, auto);
+}
+
+.logLabel{
+    margin-top: 0.5em;
+    grid-column: 1/3;
+}
+
+.formContainer input{
+    margin-top: 0.5em;
+    grid-column: 3/5;
+}
+
+.formContainer button{
+    margin-top: 0.5em;
+    grid-column: 3/4;
+}
+
+.remember{
+    margin-top: 0.5em;
+    margin:auto;
+    text-align: center;
+    grid-column: 2/4;
+}
+
+.alreadyLogged{
+    grid-column: 1/17;
+}
+
+.adminLogged{
+    grid-column: 1/17;
+}
+
+table, th, td {
+    border:1px solid black;
+  }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthLife Ireland</title>
+    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="script.js"></script>
+</head>
+<body onload="startTime()">
+    <header>
+            <a href="index.html" id='navbit1' class="navbit"><img src="images/Logo.png" alt="Logo" id="logoImage"></a>
+            <h1>HealthLife Ireland</h1>
+
+            <label for="searchfield" id="searchbar" style="margin-top: auto;">
+                <input type="search" name="searchfield" id="searchfield" placeholder="Search...">
+            </label>
+
+            <script>
+                function startTime() {
+                    const today = new Date();
+                    let h = today.getHours();
+                    let m = today.getMinutes();
+                    m = checkTime(m);
+                    document.getElementById('clock').innerHTML =  h + ":" + m;
+                    setTimeout(startTime, 1000);
+
+                    let dd = today.getDate();
+                    let mm = today.getMonth() + 1;
+                    let y = today.getFullYear();
+
+                    document.getElementById('date').innerHTML = dd + '/'+ mm + '/'+ y;
+                }
+                
+                function checkTime(i) {
+                    if (i < 10) {i = "0" + i};
+                    return i;
+                }
+            </script>            
+            <div id="clock">clock</div>
+
+        <div class="loginRegister">
+            <a href="login.html" class="navbit">Login</a>
+            /
+            <a href="register.html" class="navbit">Register</a>
+        </div>
+	</header>
+
+    <div class="navHeader">
+        <a href="index.html" class="navBarLinks">Home</a>
+        <a href="BMI.html" class="navBarLinks">BMI</a>
+        <a href="about.html" class="navBarLinks">About us</a>
+        <a href="events.html" class="navBarLinks">Events</a>
+        <a href="info.html" class="navBarLinks">Info</a>
+        <a href="mailto:K00261929@student.lit.ie" class="navBarLinks">Contact Us</a>
+    </div>
+
+
+
+        <h1 class="openerTxt" style="margin: auto; text-align: center; margin-bottom: 1em;">Add products</h1>
+        
+        
+        <div class="formContainer">
+            <form action="adminPage.html" method="post">
+                <label for="productID" class="logLabel">ProductID:</label>
+                <input class="productID" type="text" placeholder="A15" name="productID" required>
+            
+                <label for="number" class="logLabel">Quantity:</label>
+                <input type="number" placeholder="0" name="number" required>
+                    
+                <button onclick="addProduct()" type="submit">Add product</button>
+            </form>
+        </div>  
+        <script>
+            function addProduct() {
+            alert("Product has been added successfully");
+            }
+        </script>
+
+
+        <div class="alreadyLogged">
+            <span><a href="index.html">Return to home</a></span>
+        </div>
+
+        <footer>
+            <a href="index.html">Home</a>
+            <a href="BMI.html">BMI</a>
+            <a href="about.html">About us</a>
+            <a href="events.html">Events</a>
+            <a href="info.html">Info</a>
+            <a href="mailto:K00261929@student.lit.ie"> Email us:K00261929@student.lit.ie</a>
+            <a href="#"><div id="date">date</div></a>
+        </footer>
+</body>
+</html>
